@@ -14,6 +14,7 @@ class Comments extends React.Component {
         const comment = this.refs.comment.value;
         this.props.addComment(postId, author, comment);
         this.refs.commentForm.reset();
+        this.refs.author.focus();
     }
 
     render() {
