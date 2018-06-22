@@ -1,6 +1,6 @@
 import React from 'react';
 import Photo from './Photo';
-import Comments from './Comments';
+import ConstComments from './ConstComments';
 
 const Single = props => {
     const ii = props.posts.findIndex(post => post.code === props.params.postId);
@@ -9,7 +9,7 @@ const Single = props => {
     return (
         <div className="single-photo">
             <Photo post={post} {...props}/>
-            <Comments comments={comments} {...props} />
+            <ConstComments comments={comments} {...props} />
         </div>
     );
 };
